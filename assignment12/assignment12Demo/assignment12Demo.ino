@@ -124,7 +124,7 @@ void testSumArrays() {
     // Compare the results of assembly language implementation and real answer
 
     for(int j = 0; j < length-1; j++) {
-      if(algorithm != answers[i][j]) {
+      if(algorithm [j]!= answers[i][j]) {
           Serial.print("Error in cSumArrays: Recieved [");
           for(int k = 0; k < length-1; k++) {
             Serial.print(algorithm[k]);
@@ -146,7 +146,7 @@ void testSumArrays() {
     }
 
     for(int j = 0; j < length; j++) {
-      if(algorithm != answers[i][j]) {
+      if(assembly[j] != answers[i][j]) {
           Serial.print("Error in sumArrays (assembly): Recieved [");
           for(int k = 0; k < length-1; k++) {
             Serial.print(assembly[k]);
@@ -186,7 +186,7 @@ void testDot() {
 
   uint8_t lengths[] = { 3, 3, 2, 2, 3, 2};
 
-  uint16_t answers[] = {14, 450, 20, 10049, 10, 135};
+  uint16_t answers[] = {14, 650, 20, 10049, 10, 135};
   
   int numTests = sizeof(lengths)/sizeof(uint8_t);
 
