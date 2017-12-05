@@ -5,14 +5,43 @@
 
 uint8_t cStringLengthAlgorithm(const char aString[]) {
    // TODO: Write a C-code version of the algorithm to find the string's length  
+  const char *p  = aString;
+  int count = 0;
+   while(*p != 0)
+   {
+      count++;
+      p++;
+   }
+   return count;
+   
 }
 
-void cSumArrays(uint8_t *a, uint8_t *b, uint8_t *c, byte length) {
+void cSumArrays(uint8_t *a, uint8_t *b, uint8_t *c, byte lengthy) {
   // TODO: Write a C-code version of the algorithm to sum arrays a and b, storing the result in c using pointers (no [] allowed!)
+  while(lengthy != 0)
+   {
+      *c = *a + *b;
+      a++;
+      b++;
+      c++;
+      lengthy--;
+   }
+   return;
 }
 
-uint16_t cDot(uint8_t *a, uint8_t *b, byte length) {
+uint16_t cDot(uint8_t *a, uint8_t *b, byte lengthy) {
   // TODO: Write a C-code version that returns the dot product of a and b, using pointers (no [] allowed!)
+  int sum = 0;
+  int product = 0;
+  while(lengthy != 0)
+   {
+      product = *a * *b;
+      sum += product; 
+      a++;
+      b++;
+      lengthy--;
+   }
+   return sum;
 }
 
 void testGlobals() {
